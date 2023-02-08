@@ -1,0 +1,73 @@
+import math
+
+def calculator():
+    while True:
+        print("1. Сложение")
+        print("2. Вычитание")
+        print("3. Умножение")
+        print("4. Деление")
+        print("5. Степень числа")
+        print("6. Корень числа")
+        print("7. Факториал")
+        print("8. Выход")
+        choice = int(input("Enter your choice: "))
+        if choice == 1:
+            try:
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+                result = num1 + num2
+                print("Result: ", result)
+            except ValueError:
+                print("Это не число!")
+        elif choice == 2:
+            try:
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+                result = num1 - num2
+                print("Result: ", result)
+            except ValueError:
+                print("Это не число!")
+        elif choice == 3:
+            try:
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+                result = num1 * num2
+                print("Result: ", result)
+            except ValueError:
+                print("Это не число!")
+        elif choice == 4:
+            try:
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+                result = num1 / num2
+                print("Result: ", result)
+            except ValueError:
+                print("Это не число!")
+        elif choice == 5:
+            try:
+                num1 = float(input("Enter the base number: "))
+                num2 = int(input("Enter the power: "))
+                result = num1 ** num2
+                print("Result: ", result)
+            except ValueError:
+                print("Это не число!")
+        elif choice == 6:
+            try:
+                num1 = float(input("Enter the number: "))
+                result = math.sqrt(num1)
+                print("Result: ", result)
+            except ValueError:
+                print("Это не число!")
+        elif choice == 7:
+            try:
+                num1 = int(input("Enter the number: "))
+                result = math.factorial(num1)
+                print("Result: ", result)
+            except ValueError:
+                print("Это не число!")
+        elif choice == 8:
+            break
+        else:
+            print("Invalid Input")
+
+calculator()
